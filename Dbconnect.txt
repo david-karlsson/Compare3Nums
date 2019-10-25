@@ -1,0 +1,33 @@
+using Microsoft
+
+namespace EFCT
+
+
+public class Student{
+[Key]
+[DatabaseGenerated(DatabasegeneratedOPtion.Identity)]
+
+public int StudentID {get; set;}
+
+pclic string name {get; set}
+
+}
+
+public class SchoolContext _ DbContext{
+private cons string connectionString ="LAPTOP-46CRI5GH"
+
+protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
+{
+
+optionsBuilder.UseSqlServer(connectionString);
+
+}
+
+public DbSet<Student> Students { get; set; }
+
+}
+
+class Program
+{
+static viod Main(string[] args)
+}
